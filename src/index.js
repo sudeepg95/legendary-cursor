@@ -577,9 +577,9 @@ function constructGeometry() {
 
 
     let geometry = new THREE.BufferGeometry();
-    geometry.addAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
-    geometry.addAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
-    geometry.addAttribute( 'uv', new THREE.BufferAttribute( new Float32Array(uvs), 2 ) );
+    geometry.setAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
+    geometry.setAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
+    geometry.setAttribute( 'uv', new THREE.BufferAttribute( new Float32Array(uvs), 2 ) );
     let mesh = new THREE.Mesh( geometry, lineMaterial );
     mesh.name = "line";
 
@@ -628,8 +628,8 @@ function constructSparkleGeometry() {
 
 
     var geometry = new THREE.BufferGeometry();
-    geometry.addAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
-    geometry.addAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
+    geometry.setAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
+    geometry.setAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
     var mesh = new THREE.Points( geometry, sparkleMaterial );
     mesh.name = "sparkles";
 
@@ -691,9 +691,9 @@ function constructLightShaftGeometry() {
     }
 
     var geometry = new THREE.BufferGeometry();
-    geometry.addAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
-    geometry.addAttribute( 'uv', new THREE.BufferAttribute( new Float32Array(uvs), 2 ) );
-    geometry.addAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
+    geometry.setAttribute( 'position', new THREE.BufferAttribute( new Float32Array(vertices), 3 ) );
+    geometry.setAttribute( 'uv', new THREE.BufferAttribute( new Float32Array(uvs), 2 ) );
+    geometry.setAttribute( 'fx', new THREE.BufferAttribute( new Float32Array(fxs), 4 ) );
     var mesh = new THREE.Mesh( geometry, lightShaftMaterial );
     mesh.name = "lightShafts";
 
